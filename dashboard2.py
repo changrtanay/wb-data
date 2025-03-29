@@ -225,7 +225,9 @@ with tab3:
             import google.generativeai as genai  
             
             # ✅ Configure Gemini with your API key
-            genai.configure(api_key="in-env-file")
+            # genai.configure(api_key="in-env-file")
+            gemini_api_key = st.secrets["GEMINI_API_KEY"]
+
 
             policy_data = []  # To store policies for export
 
