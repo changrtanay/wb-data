@@ -118,7 +118,7 @@ def run_prophet_forecast(prophet_data):
     forecasts = []
 
     for country, series, data in prophet_data:
-        data = data[(data["ds"] >= "2000-01-01") & (data["ds"] <= "2023-12-31")]
+        # data = data[(data["ds"] >= "2000-01-01") & (data["ds"] <= "2023-12-31")]
 
         if data.empty or len(data) < 5:
             continue
