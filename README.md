@@ -54,13 +54,11 @@ streamlit run app.py
 
 ## File Structure
 ```
-├── dataset.csv                 # Raw dataset
+├── 5_year_forecast.csv         # Forecasted Data
 ├── cleaned_dataset4.csv        # Cleaned dataset after preprocessing
-├── app.py                      # Streamlit application
+├── dashboard2.py               # Streamlit application
 ├── README.md                   # Project documentation (this file)
 ├── requirements.txt            # Required dependencies
-├── policy_suggestions.xlsx     # Generated policy recommendations
-├── combined_forecast_results.xlsx # Historical + Forecasted data
 ```
 
 ## Usage
