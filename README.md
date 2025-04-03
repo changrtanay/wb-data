@@ -1,4 +1,5 @@
-# Data Cleaning, Forecasting, and Policy Analysis \n On World Bank's World Development Indicators Dataset
+# Data Cleaning, Forecasting, and Policy Analysis
+  On World Bank's World Development Indicators Dataset
 
 ## Overview
 This project involves data cleaning, transformation, forecasting, and policy analysis using economic and social indicators from multiple countries. The workflow includes:
