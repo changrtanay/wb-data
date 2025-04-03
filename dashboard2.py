@@ -6,6 +6,16 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import io
 
+# ---- Introduction Message ----
+st.title("World Development Indicators 📈")
+# st.info("""
+# - Explore economic indicators across different countries.
+# - Generate forecasts for key economic trends.
+# - Get AI-powered policy suggestions based on forecasted trends.
+
+# Use the filters in the sidebar to customize your analysis. 
+# """)
+
 # ---- Data Loading ----
 @st.cache_data
 def load_data():
@@ -32,8 +42,9 @@ if "forecast_run" not in st.session_state:
     st.session_state.forecast_run = False
 
 # ---- Sidebar Filters ----
-st.sidebar.header("Filter Options")
+st.sidebar.header("🌍 **World Bank's Dataset**")
 
+st.sidebar.header("Filter Options")
 selected_countries = st.sidebar.multiselect("Select Countries", df["Country Name"].unique(), default=["United States"])
 indicator_mode = st.sidebar.radio("Select Indicator Type", ["All Indicators", "Top Indicators"])
 
@@ -67,7 +78,10 @@ tab1, tab2, tab3 = st.tabs(["📊 Dashboard", "🔮 Forecasting", "📚 Policy S
 with tab1:
     st.session_state.active_tab = "Dashboard"
     st.title("📊 Data Dashboard")
-    st.write("Explore economic and social indicators across different countries and years.")
+    # 🟢 Add a note about missing data
+    st.info("ℹ️ Missing data has been interpolated or filled where necessary.")
+
+    # st.write("Explore economic and social indicators across different countries and years.")
 
     if not filtered_df.empty:
         for series in selected_series:
